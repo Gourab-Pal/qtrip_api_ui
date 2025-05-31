@@ -1,54 +1,56 @@
 package demo.utils;
 
+import java.lang.reflect.Method;
 import java.time.Duration;
-
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Parameters;
-
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
-
 import demo.wrappers.DriverSingleton;
 
 public class Setup {
-    public static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+
+    public static ChromeDriver driver;
     public static ExtentReports reports;
-    public static ThreadLocal<ExtentTest> test = new ThreadLocal<>();
-    private String resourcesFolderPath = System.getProperty("user.dir") + "\\src\\test\\resources\\";
-    private String extentReportFileName = resourcesFolderPath + "qtrip_reports.html";
+    public static ExtentTest test;
+
+    public static String resourcesFolderPath = System.getProperty("user.dir") + "\\src\\test\\resources\\";
+    public static String extentReportFileName = resourcesFolderPath + "qtrip_reports.html";
     public static String screenshotsFolderPath = System.getProperty("user.dir") + "\\src\\test\\screenshots\\";
 
-    @Parameters("browser")
-    @BeforeMethod
-    public void init(String browser) {
-        WebDriver webDriver = DriverSingleton.getDriverInstance(browser);
-        driver.set(webDriver);
-        webDriver.manage().window().maximize();
-        webDriver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
+    @BeforeMethod(alwaysRun = true)
+    public void init(Method method) {
+        // Initialize ExtentReports if not already done
         if (reports == null) {
             reports = new ExtentReports(extentReportFileName, true);
         }
 
-        ExtentTest extentTest = reports.startTest("Tests for Qtrip [" + browser + "]");
-        test.set(extentTest);
+        // Start a new test with method name
+        test = reports.startTest(method.getName());
+
+        // Try to initialize WebDriver only for functional tests
+        try {
+            driver = DriverSingleton.getDriverInstance();
+            if (driver != null) {
+                driver.manage().window().maximize();
+                driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+            }
+        } catch (Exception e) {
+            // Log or ignore if driver isn't needed for this test
+            System.out.println("Driver initialization skipped: " + e.getMessage());
+        }
     }
 
-    @AfterMethod
+    @AfterSuite(alwaysRun = true)
     public void tearDown() {
-        reports.endTest(test.get());
-        reports.flush();
-        DriverSingleton.closeDriverInstance();
-    }
+        if (reports != null && test != null) {
+            reports.endTest(test);
+            reports.flush();
+        }
 
-    public static WebDriver getDriver() {
-        return driver.get();
-    }
-
-    public static ExtentTest getTest() {
-        return test.get();
+        if (driver != null) {
+            DriverSingleton.closeDriverInstance();
+        }
     }
 }
-

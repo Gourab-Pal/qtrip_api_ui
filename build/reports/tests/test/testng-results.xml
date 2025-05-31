@@ -1,78 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="3" passed="3" failed="0" skipped="0">
+<testng-results total="8" passed="7" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-22T04:40:14Z" name="Multi-Browser Suite" finished-at="2025-05-22T04:40:25Z" duration-ms="11706">
+  <suite started-at="2025-05-31T13:57:20Z" name="Multi-Browser Suite" finished-at="2025-05-31T13:59:38Z" duration-ms="137813">
     <groups>
+      <group name="functional">
+        <method signature="QtripTests.qtrip_ui_001()[pri:0, instance:demo.QtripTests@13d4992d]" name="qtrip_ui_001" class="demo.QtripTests"/>
+        <method signature="QtripTests.qtrip_ui_002()[pri:0, instance:demo.QtripTests@13d4992d]" name="qtrip_ui_002" class="demo.QtripTests"/>
+        <method signature="QtripTests.qtrip_ui_003()[pri:0, instance:demo.QtripTests@13d4992d]" name="qtrip_ui_003" class="demo.QtripTests"/>
+      </group> <!-- functional -->
+      <group name="api">
+        <method signature="QtripTests.qtrip_non_functional_001()[pri:0, instance:demo.QtripTests@13d4992d]" name="qtrip_non_functional_001" class="demo.QtripTests"/>
+        <method signature="QtripTests.qtrip_non_functional_002()[pri:0, instance:demo.QtripTests@13d4992d]" name="qtrip_non_functional_002" class="demo.QtripTests"/>
+        <method signature="QtripTests.qtrip_non_functional_003()[pri:0, instance:demo.QtripTests@13d4992d]" name="qtrip_non_functional_003" class="demo.QtripTests"/>
+        <method signature="QtripTests.qtrip_non_functional_004()[pri:0, instance:demo.QtripTests@13d4992d]" name="qtrip_non_functional_004" class="demo.QtripTests"/>
+        <method signature="QtripTests.qtrip_non_functional_005()[pri:0, instance:demo.QtripTests@13d4992d]" name="qtrip_non_functional_005" class="demo.QtripTests"/>
+      </group> <!-- api -->
     </groups>
-    <test started-at="2025-05-22T04:40:14Z" name="Chrome Tests" finished-at="2025-05-22T04:40:21Z" duration-ms="6924">
+    <test started-at="2025-05-31T13:57:20Z" name="Chrome Tests" finished-at="2025-05-31T13:59:38Z" duration-ms="137813">
       <class name="demo.QtripTests">
-        <test-method is-config="true" signature="init(java.lang.String)[pri:0, instance:demo.QtripTests@147a5d08]" started-at="2025-05-22T10:10:14Z" name="init" finished-at="2025-05-22T10:10:18Z" duration-ms="3939" status="PASS">
+        <test-method is-config="true" signature="init(java.lang.reflect.Method)[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:27:20Z" name="init" finished-at="2025-05-31T19:27:23Z" duration-ms="3098" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[public void demo.QtripTests.qtrip_non_functional_001() throws com.fasterxml.jackson.core.exc.StreamWriteException,com.fasterxml.jackson.databind.DatabindException,java.io.IOException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="qtrip_tc_001()[pri:0, instance:demo.QtripTests@147a5d08]" started-at="2025-05-22T10:10:18Z" name="qtrip_tc_001" description="Verify if the homepage url is valid" finished-at="2025-05-22T10:10:19Z" duration-ms="1792" status="PASS">
+        <test-method signature="qtrip_non_functional_001()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:27:23Z" name="qtrip_non_functional_001" finished-at="2025-05-31T19:27:27Z" duration-ms="4029" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- qtrip_tc_001 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:demo.QtripTests@147a5d08]" started-at="2025-05-22T10:10:19Z" name="tearDown" finished-at="2025-05-22T10:10:21Z" duration-ms="1155" status="PASS">
+        </test-method> <!-- qtrip_non_functional_001 -->
+        <test-method is-config="true" signature="init(java.lang.reflect.Method)[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:27:27Z" name="init" finished-at="2025-05-31T19:27:27Z" duration-ms="24" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void demo.QtripTests.qtrip_non_functional_002()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="qtrip_non_functional_002()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:27:27Z" name="qtrip_non_functional_002" finished-at="2025-05-31T19:27:43Z" duration-ms="15650" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+	expected [400] but found [200]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+	expected [400] but found [200]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:43)
+	at demo.QtripTests.qtrip_non_functional_002(QtripTests.java:139)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:643)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:820)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1128)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:400)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- qtrip_non_functional_002 -->
+        <test-method is-config="true" signature="init(java.lang.reflect.Method)[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:27:43Z" name="init" finished-at="2025-05-31T19:27:43Z" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void demo.QtripTests.qtrip_non_functional_003() throws org.json.JSONException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="qtrip_non_functional_003()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:27:43Z" name="qtrip_non_functional_003" finished-at="2025-05-31T19:27:49Z" duration-ms="5613" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- qtrip_non_functional_003 -->
+        <test-method is-config="true" signature="init(java.lang.reflect.Method)[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:27:49Z" name="init" finished-at="2025-05-31T19:27:49Z" duration-ms="16" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void demo.QtripTests.qtrip_non_functional_004() throws org.json.JSONException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="qtrip_non_functional_004()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:27:49Z" name="qtrip_non_functional_004" finished-at="2025-05-31T19:27:55Z" duration-ms="6670" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- qtrip_non_functional_004 -->
+        <test-method signature="qtrip_non_functional_005()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:27:55Z" name="qtrip_non_functional_005" finished-at="2025-05-31T19:28:06Z" duration-ms="10723" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- qtrip_non_functional_005 -->
+        <test-method is-config="true" signature="init(java.lang.reflect.Method)[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:27:55Z" name="init" finished-at="2025-05-31T19:27:55Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void demo.QtripTests.qtrip_non_functional_005() throws org.json.JSONException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method is-config="true" signature="init(java.lang.reflect.Method)[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:28:06Z" name="init" finished-at="2025-05-31T19:28:06Z" duration-ms="14" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void demo.QtripTests.qtrip_ui_001()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="qtrip_ui_001()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:28:06Z" name="qtrip_ui_001" finished-at="2025-05-31T19:28:24Z" duration-ms="18345" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- qtrip_ui_001 -->
+        <test-method is-config="true" signature="init(java.lang.reflect.Method)[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:28:24Z" name="init" finished-at="2025-05-31T19:28:24Z" duration-ms="16" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void demo.QtripTests.qtrip_ui_002() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="qtrip_ui_002()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:28:24Z" name="qtrip_ui_002" finished-at="2025-05-31T19:29:12Z" duration-ms="47713" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- qtrip_ui_002 -->
+        <test-method is-config="true" signature="init(java.lang.reflect.Method)[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:29:12Z" name="init" finished-at="2025-05-31T19:29:12Z" duration-ms="15" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void demo.QtripTests.qtrip_ui_003() throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method signature="qtrip_ui_003()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:29:12Z" name="qtrip_ui_003" finished-at="2025-05-31T19:29:38Z" duration-ms="25862" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- qtrip_ui_003 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:29:38Z" name="tearDown" finished-at="2025-05-31T19:29:39Z" duration-ms="608" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- demo.QtripTests -->
     </test> <!-- Chrome Tests -->
-    <test started-at="2025-05-22T04:40:14Z" name="Edge Tests" finished-at="2025-05-22T04:40:21Z" duration-ms="7815">
-      <class name="demo.QtripTests">
-        <test-method is-config="true" signature="init(java.lang.String)[pri:0, instance:demo.QtripTests@48793bef]" started-at="2025-05-22T10:10:14Z" name="init" finished-at="2025-05-22T10:10:18Z" duration-ms="3939" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[edge]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method signature="qtrip_tc_001()[pri:0, instance:demo.QtripTests@48793bef]" started-at="2025-05-22T10:10:18Z" name="qtrip_tc_001" description="Verify if the homepage url is valid" finished-at="2025-05-22T10:10:19Z" duration-ms="1487" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- qtrip_tc_001 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:demo.QtripTests@48793bef]" started-at="2025-05-22T10:10:19Z" name="tearDown" finished-at="2025-05-22T10:10:21Z" duration-ms="2371" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- demo.QtripTests -->
-    </test> <!-- Edge Tests -->
-    <test started-at="2025-05-22T04:40:14Z" name="Firefox Tests" finished-at="2025-05-22T04:40:25Z" duration-ms="11706">
-      <class name="demo.QtripTests">
-        <test-method is-config="true" signature="init(java.lang.String)[pri:0, instance:demo.QtripTests@5965be2d]" started-at="2025-05-22T10:10:14Z" name="init" finished-at="2025-05-22T10:10:23Z" duration-ms="9083" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method signature="qtrip_tc_001()[pri:0, instance:demo.QtripTests@5965be2d]" started-at="2025-05-22T10:10:23Z" name="qtrip_tc_001" description="Verify if the homepage url is valid" finished-at="2025-05-22T10:10:24Z" duration-ms="1569" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- qtrip_tc_001 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:demo.QtripTests@5965be2d]" started-at="2025-05-22T10:10:24Z" name="tearDown" finished-at="2025-05-22T10:10:25Z" duration-ms="1037" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- demo.QtripTests -->
-    </test> <!-- Firefox Tests -->
   </suite> <!-- Multi-Browser Suite -->
 </testng-results>

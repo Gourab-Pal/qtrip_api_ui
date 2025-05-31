@@ -6,27 +6,29 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
+import demo.wrappers.Wrappers;
+
 public class Login {
     ChromeDriver driver;
     public String pageUrl = "https://qtripdynamic-qa-frontend.vercel.app/pages/login/";
-
     public Login(ChromeDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
+        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 20), this);
     }
 
-    @FindBy(css = "input[type='email']")
-    WebElement inputEmailField;
+    @FindBy(name = "email")
+    public WebElement emailField;
 
-    @FindBy(css = "input[type='password']")
-    WebElement inputPasswordField;
+    @FindBy(name = "password")
+    public WebElement passwordField;
 
-    @FindBy(css = "button[type='submit']")
-    WebElement performLoginButton;
+    @FindBy(xpath = "//button[text()='Login to QTrip']")
+    public WebElement loginButton;
 
     public void navigateToLogin() {
-        if (driver.getCurrentUrl() != pageUrl) {
+        if (!driver.getCurrentUrl().equals(pageUrl)) {
             driver.get(pageUrl);
         }
+        Wrappers.logInfo("Arrived at login page");
     }
 }
