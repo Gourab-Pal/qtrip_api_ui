@@ -86,7 +86,6 @@ This project automates the testing of **QTrip**, a travel booking e-commerce pla
 
 ## 📜 **Learn More About QTrip**  
 
-- [📘 Project Documentation & User Guide](https://github.com/Gourab-Pal/qtrip_api_ui/wiki) _(If available)_  
-- [🌐 Live Website](https://qtrip-dynamic-frontend.vercel.app/) _(QTrip demo frontend)_  
+- [🌐 Application under test](https://qtripdynamic-qa-frontend.vercel.app/) _(QTrip)_  
 
 ---
