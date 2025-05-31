@@ -55,17 +55,8 @@ This project automates the testing of **QTrip**, a travel booking e-commerce pla
 ---
 
 ## 📸 **Snapshots of the Work**  
-### **QTrip Home Page**  
-![QTrip Home Page](screenshots/qtrip_home.png)  
-
-### **Login Page**  
-![QTrip Login Page](screenshots/qtrip_login.png)  
-
-### **Hotel Search Results**  
-![QTrip Search Results](screenshots/qtrip_search_results.png)  
-
-### **Booking Confirmation Page**  
-![QTrip Booking Confirmation](screenshots/qtrip_booking_confirmation.png)  
+### **Extent report**  
+![QTrip Home Page](src/test/demo_image/demo_extent_report.png)
 
 ---
 
