@@ -2,7 +2,7 @@
 <testng-results total="8" passed="7" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-31T13:57:20Z" name="Multi-Browser Suite" finished-at="2025-05-31T13:59:38Z" duration-ms="137813">
+  <suite started-at="2025-06-06T02:50:44Z" name="Qtrip Suite" finished-at="2025-06-06T02:53:20Z" duration-ms="155789">
     <groups>
       <group name="functional">
         <method signature="QtripTests.qtrip_ui_001()[pri:0, instance:demo.QtripTests@13d4992d]" name="qtrip_ui_001" class="demo.QtripTests"/>
@@ -17,9 +17,9 @@
         <method signature="QtripTests.qtrip_non_functional_005()[pri:0, instance:demo.QtripTests@13d4992d]" name="qtrip_non_functional_005" class="demo.QtripTests"/>
       </group> <!-- api -->
     </groups>
-    <test started-at="2025-05-31T13:57:20Z" name="Chrome Tests" finished-at="2025-05-31T13:59:38Z" duration-ms="137813">
+    <test started-at="2025-06-06T02:50:44Z" name="Chrome Tests" finished-at="2025-06-06T02:53:20Z" duration-ms="155789">
       <class name="demo.QtripTests">
-        <test-method is-config="true" signature="init(java.lang.reflect.Method)[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:27:20Z" name="init" finished-at="2025-05-31T19:27:23Z" duration-ms="3098" status="PASS">
+        <test-method is-config="true" signature="init(java.lang.reflect.Method)[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-06-06T08:20:44Z" name="init" finished-at="2025-06-06T08:20:51Z" duration-ms="6414" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -30,11 +30,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="qtrip_non_functional_001()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:27:23Z" name="qtrip_non_functional_001" finished-at="2025-05-31T19:27:27Z" duration-ms="4029" status="PASS">
+        <test-method signature="qtrip_non_functional_001()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-06-06T08:20:51Z" name="qtrip_non_functional_001" finished-at="2025-06-06T08:20:55Z" duration-ms="4101" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- qtrip_non_functional_001 -->
-        <test-method is-config="true" signature="init(java.lang.reflect.Method)[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:27:27Z" name="init" finished-at="2025-05-31T19:27:27Z" duration-ms="24" status="PASS">
+        <test-method is-config="true" signature="init(java.lang.reflect.Method)[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-06-06T08:20:55Z" name="init" finished-at="2025-06-06T08:20:55Z" duration-ms="16" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -45,7 +45,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="qtrip_non_functional_002()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:27:27Z" name="qtrip_non_functional_002" finished-at="2025-05-31T19:27:43Z" duration-ms="15650" status="FAIL">
+        <test-method signature="qtrip_non_functional_002()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-06-06T08:20:55Z" name="qtrip_non_functional_002" finished-at="2025-06-06T08:21:11Z" duration-ms="16678" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[The following asserts failed:
@@ -69,20 +69,42 @@
 	at org.testng.TestRunner.privateRun(TestRunner.java:782)
 	at org.testng.TestRunner.run(TestRunner.java:632)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:39)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:400)
-	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at java.base/java.lang.Thread.run(Thread.java:834)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:146)
+	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:91)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
+	at com.sun.proxy.$Proxy2.stop(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 ]]>
             </full-stacktrace>
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- qtrip_non_functional_002 -->
-        <test-method is-config="true" signature="init(java.lang.reflect.Method)[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:27:43Z" name="init" finished-at="2025-05-31T19:27:43Z" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="init(java.lang.reflect.Method)[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-06-06T08:21:11Z" name="init" finished-at="2025-06-06T08:21:11Z" duration-ms="23" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -93,11 +115,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="qtrip_non_functional_003()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:27:43Z" name="qtrip_non_functional_003" finished-at="2025-05-31T19:27:49Z" duration-ms="5613" status="PASS">
+        <test-method signature="qtrip_non_functional_003()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-06-06T08:21:11Z" name="qtrip_non_functional_003" finished-at="2025-06-06T08:21:19Z" duration-ms="7313" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- qtrip_non_functional_003 -->
-        <test-method is-config="true" signature="init(java.lang.reflect.Method)[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:27:49Z" name="init" finished-at="2025-05-31T19:27:49Z" duration-ms="16" status="PASS">
+        <test-method is-config="true" signature="init(java.lang.reflect.Method)[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-06-06T08:21:19Z" name="init" finished-at="2025-06-06T08:21:19Z" duration-ms="6" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -108,15 +130,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="qtrip_non_functional_004()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:27:49Z" name="qtrip_non_functional_004" finished-at="2025-05-31T19:27:55Z" duration-ms="6670" status="PASS">
+        <test-method signature="qtrip_non_functional_004()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-06-06T08:21:19Z" name="qtrip_non_functional_004" finished-at="2025-06-06T08:21:25Z" duration-ms="6556" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- qtrip_non_functional_004 -->
-        <test-method signature="qtrip_non_functional_005()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:27:55Z" name="qtrip_non_functional_005" finished-at="2025-05-31T19:28:06Z" duration-ms="10723" status="PASS">
+        <test-method signature="qtrip_non_functional_005()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-06-06T08:21:25Z" name="qtrip_non_functional_005" finished-at="2025-06-06T08:21:36Z" duration-ms="10708" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- qtrip_non_functional_005 -->
-        <test-method is-config="true" signature="init(java.lang.reflect.Method)[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:27:55Z" name="init" finished-at="2025-05-31T19:27:55Z" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="init(java.lang.reflect.Method)[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-06-06T08:21:25Z" name="init" finished-at="2025-06-06T08:21:25Z" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -127,7 +149,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method is-config="true" signature="init(java.lang.reflect.Method)[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:28:06Z" name="init" finished-at="2025-05-31T19:28:06Z" duration-ms="14" status="PASS">
+        <test-method is-config="true" signature="init(java.lang.reflect.Method)[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-06-06T08:21:36Z" name="init" finished-at="2025-06-06T08:21:36Z" duration-ms="11" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -138,11 +160,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="qtrip_ui_001()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:28:06Z" name="qtrip_ui_001" finished-at="2025-05-31T19:28:24Z" duration-ms="18345" status="PASS">
+        <test-method signature="qtrip_ui_001()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-06-06T08:21:36Z" name="qtrip_ui_001" finished-at="2025-06-06T08:21:55Z" duration-ms="18638" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- qtrip_ui_001 -->
-        <test-method is-config="true" signature="init(java.lang.reflect.Method)[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:28:24Z" name="init" finished-at="2025-05-31T19:28:24Z" duration-ms="16" status="PASS">
+        <test-method is-config="true" signature="init(java.lang.reflect.Method)[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-06-06T08:21:55Z" name="init" finished-at="2025-06-06T08:21:55Z" duration-ms="28" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -153,11 +175,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="qtrip_ui_002()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:28:24Z" name="qtrip_ui_002" finished-at="2025-05-31T19:29:12Z" duration-ms="47713" status="PASS">
+        <test-method signature="qtrip_ui_002()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-06-06T08:21:55Z" name="qtrip_ui_002" finished-at="2025-06-06T08:22:42Z" duration-ms="47630" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- qtrip_ui_002 -->
-        <test-method is-config="true" signature="init(java.lang.reflect.Method)[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:29:12Z" name="init" finished-at="2025-05-31T19:29:12Z" duration-ms="15" status="PASS">
+        <test-method is-config="true" signature="init(java.lang.reflect.Method)[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-06-06T08:22:42Z" name="init" finished-at="2025-06-06T08:22:42Z" duration-ms="8" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -168,15 +190,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method signature="qtrip_ui_003()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:29:12Z" name="qtrip_ui_003" finished-at="2025-05-31T19:29:38Z" duration-ms="25862" status="PASS">
+        <test-method signature="qtrip_ui_003()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-06-06T08:22:42Z" name="qtrip_ui_003" finished-at="2025-06-06T08:23:20Z" duration-ms="37648" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- qtrip_ui_003 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-05-31T19:29:38Z" name="tearDown" finished-at="2025-05-31T19:29:39Z" duration-ms="608" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:demo.QtripTests@13d4992d]" started-at="2025-06-06T08:23:20Z" name="tearDown" finished-at="2025-06-06T08:23:21Z" duration-ms="573" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- demo.QtripTests -->
     </test> <!-- Chrome Tests -->
-  </suite> <!-- Multi-Browser Suite -->
+  </suite> <!-- Qtrip Suite -->
 </testng-results>

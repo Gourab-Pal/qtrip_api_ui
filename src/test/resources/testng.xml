@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Qtrip Suite" parallel="tests" thread-count="3">
+<suite name="Qtrip Suite">
     <listeners>
         <listener class-name="demo.listeners.MyTestListener"/>
     </listeners>
